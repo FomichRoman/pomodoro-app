@@ -155,6 +155,10 @@
     font-size: 12px;
     line-height: 16px;
   }
+
+  .watch_btn_dec svg {
+  transform: translate(-20%, -15%);
+}
   
   .btn {
     padding: 12px 35px;
