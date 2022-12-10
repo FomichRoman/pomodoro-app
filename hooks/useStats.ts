@@ -125,6 +125,7 @@ export function useStats() {
     const accumFocusTimeLeft = tasks.filter(el => el.timeLeft != 1500).reduce((accum,item) => accum + (1500 - item.timeLeft), 0)
     const accumFocusPauseTime = tasks.filter(el => el.pauseTime != 0).reduce((accum,item) => accum + item.pauseTime, 0)
     let focus = Math.round((accumFocusTimeLeft / (accumFocusTimeLeft + accumFocusPauseTime)) * 100)
+    if (!focus) focus = 0
     return `${focus}%`
   }
   const focusData = focus()
