@@ -1,0 +1,38 @@
+.header {
+  box-shadow: 0px 10px 63px rgba(0, 0, 0, 0.07);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.logo svg {
+  margin-right: 13px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--accent-color);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  min-width: 115px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--accent-color);
+}
+
+.link svg {
+  margin-right: 9px;
+}

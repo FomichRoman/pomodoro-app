@@ -1,0 +1,21 @@
+.home__container {
+  padding-top: 60px;
+}
+
+.wrap {
+  display: flex;
+}
+
+@media (max-width: 1080px) {
+  .home__container {
+    padding-bottom: 60px;
+  }
+
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+

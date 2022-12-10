@@ -1,0 +1,32 @@
+.top_block {
+  display: flex;
+  align-items: flex-end;
+  min-height: 380px;
+  background-image: url(../../../public/stats.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.top_list {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.bottom_block {
+  display: flex;
+  padding: 11px 40px;
+  background-color: #ECECEC;
+}
+
+@media (max-width: 650px) {
+  .top_list {
+    padding: 0 20px;
+  }
+  
+  .bottom_block {
+    padding: 11px 20px;
+  }
+}

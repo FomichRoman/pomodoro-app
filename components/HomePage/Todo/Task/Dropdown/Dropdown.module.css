@@ -1,0 +1,58 @@
+.drop_list {
+  position: fixed;
+  border: 1px solid #c4c4c4;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  color: #999999;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.drop_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.drop_item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.drop_item:hover {
+  background-color: rgba(153, 153, 153, 0.26);
+}
+
+.drop_item svg {
+  margin-right: 10px;
+}
+
+.drop_btn {
+  height: 25px;
+}
+
+.drop_btn svg {
+  fill: #c4c4c4;
+}
+
+.drop_btn:hover svg {
+  fill: #9f9f9f;
+}
+
+.drop_btn_dis:hover svg {
+  fill: #c4c4c4;
+}
+
+.drop_btn_dis {
+  padding-top: 3px;
+  width: 20px;
+  height: 20px;
+}
+

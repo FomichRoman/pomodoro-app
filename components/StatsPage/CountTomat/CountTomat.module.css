@@ -1,0 +1,47 @@
+.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 179px;
+  background-color: #f4f4f4;
+}
+
+.count_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #999999;
+}
+
+.count_top svg {
+  margin-right: 15px;
+}
+
+.count_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 9px 0;
+  color: white;
+  background-color: #dc3e22;
+}
+
+@media (max-width: 1080px) {
+  .count {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 650px) { 
+  .count {
+    max-width: 180px;
+    min-height: 180px;
+  }
+}

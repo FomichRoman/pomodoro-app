@@ -1,0 +1,182 @@
+.timer {
+  width: 57%;
+  height: 507px;
+  background-color: var(--grey-color);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  padding: 19px 40px;
+  width: 100%;
+  background-color: var(--dark-grey-color);
+}
+
+.title {
+  margin: 0;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--light-color);
+}
+
+.span {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--light-color);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 70px 40px 104px 40px;
+}
+
+.watch {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 200;
+  font-size: 150px;
+  line-height: 179px;
+  color: var(--text-color);
+}
+
+.watch span {
+  margin: 0 25px;
+}
+
+.watch_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: var(--dark-grey-color);
+}
+
+.watch_btn svg {
+  transform: translateY(19%);
+}
+
+.watch_btn_dec svg {
+  transform: translateY(3%);
+}
+
+.desc {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--dark-grey-color);
+}
+
+.desc span {
+  color: black;
+}
+
+.btn_start {
+  margin-right: 25px;
+}
+
+.btn_stop {
+  padding: 13px 48px;
+  border: 2px solid #dc3e22;
+  background-color: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  color: #dc3e22;
+  transition: background-color 0.2s ease-in-out,
+                          color 0.2s ease-in-out;
+}
+
+.btn_stop:focus-visible {
+  color: var(--light-color);
+  background-color: #dc3e22;
+}
+
+.btn_stop:hover {
+  color: var(--light-color);
+  background-color: #dc3e22;
+}
+
+.btn_disabled {
+  border-color: #c4c4c4;
+  color: #c4c4c4;
+}
+
+.btn_disabled:hover {
+  color: #c4c4c4;
+  background-color: inherit;
+  cursor: default;
+}
+
+@media (max-width: 1080px) {
+  .timer {
+    width: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .timer {
+    height: auto;
+  }
+
+  .title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .watch {
+    font-size: 79px;
+    line-height: 100px;
+  }
+
+  .watch_btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bottom {
+    padding: 50px 30px 80px 30px;
+  }
+
+  .desc {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .btn {
+    padding: 12px 35px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .btn_start {
+    padding: 12px 35px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .btn_stop {
+    padding: 12px 35px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .watch span {
+    margin: 0 10px;
+  }
+}
+
+

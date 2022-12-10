@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 11.5%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #999999;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #7e7e7e;
+}
+
+@media (max-width: 650px) {
+  .btn {
+    font-size: 20px;
+  }
+}
