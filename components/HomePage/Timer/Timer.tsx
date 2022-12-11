@@ -73,7 +73,7 @@ export const Timer = () => {
               </button>
             ) : null
           ) : (
-            <button onClick={startTimer} className={`btn-reset btn ${s.btn_start}`}>
+            <button onClick={startTimer} className={`btn-reset btn ${s.btn_start}`} disabled>
               Старт
             </button>
           )}
