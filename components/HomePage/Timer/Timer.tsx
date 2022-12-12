@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTimer } from '../../../hooks/useTimer';
 import s from './Timer.module.css';
-import TimerInc from '@icons/timer-inc.svg'
-import TimerDec from '@icons/timer-dec.svg'
 import { TimerStatus } from '@redux/tasks/action';
+import { TimerMenu } from './TimerMenu/TimerMenu';
+import { TimerWatch } from './TimerWatch/TimerWatch';
+import { TimerTask } from './TimerTask/TimerTask';
 
 export const Timer = () => {
   const { 
@@ -22,37 +23,13 @@ export const Timer = () => {
     finishPause 
   } = useTimer();
 
-  const topStyle = (task: any) => {
-    if (task) {
-      if (task.timerStatus === TimerStatus.POMODORO_ON) {
-        return { backgroundColor: '#dc3e22' };
-      } else if (task.timerStatus === TimerStatus.POMODORO_PAUSE) {
-        return { backgroundColor: '#dc3e22' };
-      }
-    }
-  };
-
-  console.log(task?.timerStatus)
 
   return (
     <div className={s.timer}>
-      <div style={topStyle(task)} className={s.top}>
-        <h3 className={s.title}>{task ? task.text : text}</h3>
-        <span className={s.span}>Помидор {task ? task.count : count}</span>
-      </div>
+      <TimerMenu task={task} text={text} count={count} />
       <div className={s.bottom}>
-        <span className={s.watch}>
-          <button onClick={decMinute} className={`btn-reset ${s.watch_btn} ${s.watch_btn_dec}`}>
-            <TimerDec />
-          </button>
-          <span>{`${minutes}:${seconds}`}</span>
-          <button onClick={incMinute} className={`btn-reset ${s.watch_btn}`}>
-            <TimerInc />
-          </button>
-        </span>
-        <div className={s.desc}>
-          Задача 1 - <span>{task ? task.text : text}</span>
-        </div>
+        <TimerWatch minutes={minutes} seconds={seconds} decMinute={decMinute} incMinute={incMinute} />
+        <TimerTask task={task} text={text} />
         <div className={s.btn_wrap}>
           {task ? (
               pause ? (

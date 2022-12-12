@@ -60,12 +60,11 @@ export function useStats() {
     }
   }
 
-  const ChartData = (): any => {
-    let dayColumn: any = [];
+  const ChartData = (): {}[] => {
+    let dayColumn: {}[] = [];
     for (let i = 0; i <= 6; i++) {
       let nameDay;
       const pixelColumn = Math.floor(oneWeek.filter(el => el.day === i).reduce((accum,item) => accum + (1500 - item.timeLeft), 0) / 60) * 3.3
-      let text = oneWeek.filter(el => el.day === i)
       switch (i) {
         case 0:
           nameDay = 'Пн'

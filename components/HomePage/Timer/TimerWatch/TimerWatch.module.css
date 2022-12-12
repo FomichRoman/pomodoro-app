@@ -1,0 +1,48 @@
+.watch {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 200;
+  font-size: 150px;
+  line-height: 179px;
+  color: var(--text-color);
+}
+
+.watch span {
+  margin: 0 25px;
+}
+
+.watch_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: var(--dark-grey-color);
+}
+
+.watch_btn svg {
+  transform: translateY(19%);
+}
+
+.watch_btn_dec svg {
+  transform: translateY(3%);
+}
+
+@media (max-width: 650px) {
+  .watch {
+    font-size: 79px;
+    line-height: 100px;
+  }
+
+  .watch_btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .watch_btn_dec svg {
+    transform: translate(-20%, -15%);
+  }
+
+  .watch span {
+    margin: 0 10px;
+  }
+}

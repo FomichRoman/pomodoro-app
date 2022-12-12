@@ -26,8 +26,8 @@ export function defoultTasks(text: string) {
   text: text,
   count: 1,
   done: false,
-  timeLeft: 1500,
-  day: new Date().getDay() != -1 ? new Date().getDay() - 1 : 6,
+  timeLeft: 5,
+  day: new Date().getDay() === 0 ? 6 : new Date().getDay() - 1,
   pauseTime: 0,
   pauseCount: 0,
   timerStatus: TimerStatus.OFF
