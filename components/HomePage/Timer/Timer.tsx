@@ -7,36 +7,32 @@ import { TimerWatch } from './TimerWatch/TimerWatch';
 import { TimerTask } from './TimerTask/TimerTask';
 
 export const Timer = () => {
-  const { 
-    minutes,
-    seconds, 
-    pause, 
-    task, 
-    text, 
-    count, 
-    incMinute,
-    decMinute, 
-    startTimer, 
-    pauseTimer, 
-    stopTimer, 
-    finishTimer,
-    finishPause 
-  } = useTimer();
-
-
+      const { 
+        minutes,
+        seconds,
+        styleMenu, 
+        pause, 
+        task, 
+        text, 
+        count, 
+        incMinute,
+        decMinute, 
+        startTimer, 
+        pauseTimer, 
+        stopTimer, 
+        finishTimer,
+        finishPause 
+      } = useTimer();
+      console.log(pause)
   return (
     <div className={s.timer}>
-      <TimerMenu task={task} text={text} count={count} />
+      <TimerMenu task={task} styleMenu={styleMenu} text={text} count={count} />
       <div className={s.bottom}>
         <TimerWatch minutes={minutes} seconds={seconds} decMinute={decMinute} incMinute={incMinute} />
         <TimerTask task={task} text={text} />
         <div className={s.btn_wrap}>
           {task ? (
-              pause ? (
-                <button onClick={finishPause} className={`btn-reset btn ${s.btn_start}`}>
-                  Пропустить
-                </button>
-              ) : task.timerStatus === TimerStatus.OFF ? (
+               task.timerStatus === TimerStatus.OFF ? (
               <button onClick={startTimer} className={`btn-reset btn ${s.btn_start}`}>
                 Старт
               </button>
@@ -49,6 +45,10 @@ export const Timer = () => {
                 Продолжить
               </button>
             ) : null
+          ) : (pause) ? (
+            <button onClick={finishPause} className={`btn-reset btn ${s.btn_start}`}>
+              Пропустить
+            </button>
           ) : (
             <button onClick={startTimer} className={`btn-reset btn ${s.btn_start}`} disabled>
               Старт

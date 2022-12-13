@@ -1,10 +1,14 @@
 import React, { useRef, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { saveTaskId } from '@redux/task/actions';
 import { editTaskThunk } from '@redux/tasks/thunk';
 import s from './Task.module.css';
 import { Dropdown } from './Dropdown/Dropdown';
 import { Modal } from 'shared/Modal/Modal';
+import { useTimer } from 'hooks/useTimer';
+import { RootState } from '@redux/redusers';
+import { ITimerStatus } from '@redux/timer/reduser';
+import { TimerStatus } from '@redux/tasks/action';
 
 interface IItem {
   id: number;
@@ -18,10 +22,14 @@ export const Task = ({ id, text, count, done }: IItem) => {
   const [value, setValue] = useState('');
   const [edit, setEdit] = useState(false);
   const input = useRef<any>(null);
+  const { status } = useSelector<RootState, ITimerStatus>((state) => state.timer);
+
 
   //Диспатч в таймер
   const editHandlerClick = () => {
-    done === false ? dispatch(saveTaskId(id)) : null;
+    if (done === false && status === TimerStatus.OFF) {
+      dispatch(saveTaskId(id))
+    }
   };
 
   const editHandlerOut = () => {

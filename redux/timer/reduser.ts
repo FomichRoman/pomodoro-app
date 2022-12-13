@@ -1,5 +1,5 @@
 import { TimerStatus } from "@redux/tasks/action"
-import { TaskAction, taskType } from "./actions"
+import { TimerAction, timerType } from "./actions"
 
 
 export interface ITimerStatus {
@@ -13,9 +13,9 @@ const initialState: ITimerStatus =
   }
 
 
-export const taskReduser = (state = initialState, action: TaskAction):  ITimerStatus => {
+export const timerReduser = (state = initialState, action: TimerAction):  ITimerStatus => {
   switch (action.type) {
-    case taskType.STATUS:
+    case timerType.STATUS:
       return { ...state, status: action.payload }
     default:
       return state

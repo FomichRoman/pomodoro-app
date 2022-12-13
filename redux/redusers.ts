@@ -4,11 +4,13 @@ import { AnyAction, combineReducers } from 'redux';
 import { tasksReduser } from './tasks/reduser';
 import { taskReduser } from './task/reduser';
 import { statsReduser } from './stats/reduser';
+import { timerReduser } from './timer/reduser';
 
 const rootReducer = combineReducers({
   tasks: tasksReduser,
   task: taskReduser,
   stats: statsReduser,
+  timer: timerReduser
 });
 
 export const reducer = (state: any, action: any) => {

@@ -1,6 +1,8 @@
 .watch {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 550px;
   margin: 0;
   font-weight: 200;
   font-size: 150px;
@@ -9,12 +11,14 @@
 }
 
 .watch span {
+  width: 100%;
   margin: 0 25px;
 }
 
 .watch_btn {
   width: 50px;
   height: 50px;
+  flex-shrink: 0;
   border-radius: 100%;
   background-color: var(--dark-grey-color);
 }
@@ -29,7 +33,8 @@
 
 @media (max-width: 650px) {
   .watch {
-    font-size: 79px;
+    max-width: 280px;
+    font-size: 69px;
     line-height: 100px;
   }
 

@@ -1,22 +1,22 @@
 import { TimerStatus } from "@redux/tasks/action"
 import { ActionCreator } from "redux"
 
-export enum taskType {
+export enum timerType {
   STATUS = 'STATUS',
 }
 
 interface StatusTimer {
-  type: taskType.STATUS,
+  type: timerType.STATUS,
   payload: TimerStatus
 }
 
 
-export type TaskAction = StatusTimer
+export type TimerAction = StatusTimer
 
 
 
 export const statusTimer: ActionCreator<StatusTimer> = (status: TimerStatus) => ({
-  type: taskType.STATUS,
+  type: timerType.STATUS,
   payload: status,
 })
 

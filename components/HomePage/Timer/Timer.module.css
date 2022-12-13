@@ -55,7 +55,8 @@
 
 @media (max-width: 1080px) {
   .timer {
-    width: auto;
+    width: 100%;
+    max-width: 650px;
   }
 }
 
@@ -67,7 +68,7 @@
   }
 
   .bottom {
-    padding: 50px 30px 80px 30px;
+    padding: 50px 15px 80px 15px;
   }
   
   .btn {
